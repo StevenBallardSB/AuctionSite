@@ -38,11 +38,31 @@ namespace AuctioinSite
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<IdentityUser>(SetIdentityOptions)
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+        }
+
+        /// <summary>
+        /// Configures password strength requirements
+        /// </summary>
+        /// <param name="options"></param>
+        private void SetIdentityOptions(IdentityOptions options)
+        {
+            //set password requirements
+            options.Password.RequireDigit = false;
+            options.Password.RequiredLength = 8;
+            options.Password.RequireLowercase = false;
+            options.Password.RequireNonAlphanumeric = false;
+
+            // Set lockout options
+            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+            options.Lockout.MaxFailedAccessAttempts = 10;
+
+            //set user options
+            options.User.RequireUniqueEmail = true;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
