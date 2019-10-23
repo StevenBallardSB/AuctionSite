@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/stevenballardstudios/Fall2019_AuctionSite/_apis/build/status/StevenBallardSB.AuctionSite?branchName=master)](https://dev.azure.com/stevenballardstudios/Fall2019_AuctionSite/_build/latest?definitionId=2&branchName=master)
 # AuctionSite
 A website where users can buy and sell products in an auction format
 
