@@ -13,27 +13,27 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="listingName" class="control-label"></label>
+                <label asp-for="listingName" class="control-label">Name of product</label>
                 <input asp-for="listingName" class="form-control" />
                 <span asp-validation-for="listingName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="listItemCondition" class="control-label"></label>
+                <label asp-for="listItemCondition" class="control-label">Product Condition</label>
                 <input asp-for="listItemCondition" class="form-control" />
                 <span asp-validation-for="listItemCondition" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="isShipping" /> @Html.DisplayNameFor(model => model.isShipping)
+                    <input class="form-check-input" asp-for="isShipping" /> Are you able to ship the product?
                 </label>
             </div>
             <div class="form-group">
-                <label asp-for="listingBuyOutPrice" class="control-label"></label>
+                <label asp-for="listingBuyOutPrice" class="control-label">Product Buy Out Price</label>
                 <input asp-for="listingBuyOutPrice" class="form-control" />
                 <span asp-validation-for="listingBuyOutPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="lisingStartingPrice" class="control-label"></label>
+                <label asp-for="lisingStartingPrice" class="control-label">Product Starting Price</label>
                 <input asp-for="lisingStartingPrice" class="form-control" />
                 <span asp-validation-for="lisingStartingPrice" class="text-danger"></span>
             </div>
@@ -48,29 +48,29 @@
                 <span asp-validation-for="listingEndDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="listingDescription" class="control-label"></label>
+                <label asp-for="listingDescription" class="control-label">Product Description</label>
                 <input asp-for="listingDescription" class="form-control" />
                 <span asp-validation-for="listingDescription" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="listingCategory" class="control-label"></label>
+                <label asp-for="listingCategory" class="control-label">Product Category</label>
                 <input asp-for="listingCategory" class="form-control" />
                 <span asp-validation-for="listingCategory" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="listingImageURL" class="control-label"></label>
+                <label asp-for="listingImageURL" class="control-label">Product's Image URL</label>
                 <input asp-for="listingImageURL" class="form-control" />
                 <span asp-validation-for="listingImageURL" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create Product Listing" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-controller="Home" asp-action="Index">Back to Home Page</a>
 </div>
 
 @section Scripts {
