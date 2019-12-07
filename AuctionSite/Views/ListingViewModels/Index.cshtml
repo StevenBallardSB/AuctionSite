@@ -34,7 +34,7 @@
             <td>@Html.DisplayFor(modelItem => item.listingEndDate)</td>
             <td>@Html.DisplayFor(modelItem => item.listingDescription)</td>
             <td>@Html.DisplayFor(modelItem => item.listingCategory)</td>
-            <td>@Html.DisplayFor(modelItem => item.listingImageURL)</td>
+            <td><img src="@item.listingImageURL" /></td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.listingId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.listingId">Details</a> |
