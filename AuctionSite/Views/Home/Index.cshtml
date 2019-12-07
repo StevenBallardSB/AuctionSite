@@ -1,8 +1,15 @@
-﻿@{
+﻿@model IEnumerable<AuctionSite.Models.ListingViewModel>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Ballard's Hot Wheels Auction Site</h1>
-    <p>A website where you can sell your old hot wheels in an auction house format</p>
+    <p class="lead">A website where you can sell your old hot wheels in an auction house format. You have potential to make a lot of money off of your old Hot Wheels
+    or create that Hot Wheels collection you have always wanted. To create a listing all you have to do is register and click 'Create Listing'.
+    </p>
+    <br />
+    <br />
+    <p>If you are here to bid on some hot wheels check out some of our users listings using the link below!</p>
+    <a class="btn btn-primary btn-lg" asp-area="" asp-controller="ListingViewModels" asp-action="Index" role="button">User Listings</a>
 </div>

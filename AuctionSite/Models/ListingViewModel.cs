@@ -21,15 +21,19 @@ namespace AuctionSite.Models
         public bool isShipping { get; set; }
 
         //The price that someone can spend to forgo the auction option and buy it immediatly
+        [DataType(DataType.Currency)]
         public int listingBuyOutPrice { get; set; }
 
         //The price where the bidding starts
+        [DataType(DataType.Currency)]
         public int lisingStartingPrice { get; set; }
 
         //The date that the listing was posted
+        [DataType(DataType.Date)]
         public DateTime listingPostDate { get; set; }
 
         //The date that the listing automaticaly closes
+        [DataType(DataType.Date)]
         public DateTime listingEndDate { get; set; }
 
         //The listing desciption to describe the product
@@ -39,6 +43,7 @@ namespace AuctionSite.Models
         public string listingCategory { get; set; }
 
         //The url that calls the image for the listing
+        [DataType(DataType.ImageUrl)]
         public string listingImageURL { get; set; }
     }
 }

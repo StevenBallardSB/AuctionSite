@@ -4,80 +4,37 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>User Listings</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.listingName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.listItemCondition)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.isShipping)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.listingBuyOutPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.lisingStartingPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.listingPostDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.listingEndDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.listingDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.listingCategory)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.listingImageURL)
-            </th>
-            <th></th>
+            <th>List Item Name</th>
+            <th>List Item Condition</th>
+            <th>Can Be Shipped</th>
+            <th>List Item Buy Out Price</th>
+            <th>List Item Starting Price</th>
+            <th>List Item Posting Date</th>
+            <th>List Item Auction End Date</th>
+            <th>List Item Description</th>
+            <th>List Item Category</th>
+            <th>Picture of List Item</th>
+            <th>Buying/Bidding Options</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.listingName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.listItemCondition)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.isShipping)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.listingBuyOutPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.lisingStartingPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.listingPostDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.listingEndDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.listingDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.listingCategory)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.listingImageURL)
-            </td>
+            <td>@Html.DisplayFor(modelItem => item.listingName)</td>
+            <td>@Html.DisplayFor(modelItem => item.listItemCondition)</td>
+            <td>@Html.DisplayFor(modelItem => item.isShipping)</td>
+            <td>@Html.DisplayFor(modelItem => item.listingBuyOutPrice)</td>
+            <td>@Html.DisplayFor(modelItem => item.lisingStartingPrice)</td>
+            <td>@Html.DisplayFor(modelItem => item.listingPostDate)</td>
+            <td>@Html.DisplayFor(modelItem => item.listingEndDate)</td>
+            <td>@Html.DisplayFor(modelItem => item.listingDescription)</td>
+            <td>@Html.DisplayFor(modelItem => item.listingCategory)</td>
+            <td><img src="@item.listingImageURL" alt="Picture of Product being sold"/></td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.listingId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.listingId">Details</a> |
