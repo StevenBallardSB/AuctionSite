@@ -10,64 +10,70 @@
     <h4>ListingViewModel</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             List Item Name
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.listingName)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
+            List Item Author
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.listingAuthor)
+        </dd>
+        <dt class="col-sm-2">
             List Item Condition
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.listItemCondition)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Can Be Shipped?
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.isShipping)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             List Item Buy Out Price
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.listingBuyOutPrice)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             List Item Starting Price
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.lisingStartingPrice)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             List Item Posting Date
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.listingPostDate)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             List Item Ending Date
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.listingEndDate)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             List Item Description
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.listingDescription)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             List Item Category
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.listingCategory)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             List Item Picture
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             <img src="@Model.listingImageURL" alt="Picture of Product being sold" />
         </dd>
     </dl>
