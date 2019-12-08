@@ -54,7 +54,7 @@ namespace AuctionSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("listingId,listingName,listItemCondition,isShipping,listingBuyOutPrice,lisingStartingPrice,listingPostDate,listingEndDate,listingDescription,listingCategory,listingImageURL")] ListingViewModel listingViewModel)
+        public async Task<IActionResult> Create([Bind("listingId,listingName,listingAuthor,listItemCondition,isShipping,listingBuyOutPrice,lisingStartingPrice,listingPostDate,listingEndDate,listingDescription,listingCategory,listingImageURL")] ListingViewModel listingViewModel)
         {
             if (ModelState.IsValid)
             {
