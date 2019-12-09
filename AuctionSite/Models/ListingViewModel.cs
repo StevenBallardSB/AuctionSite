@@ -14,7 +14,10 @@ namespace AuctionSite.Models
         //The name of the item to be sold
         public string listingName { get; set; }
 
+        //The person who created the listing
+        public string listingAuthor { get; set; }
         //The condition of the listed item (Used, New, Worn, Broken,)
+
         public string listItemCondition { get; set; }
 
         //Is able to be shipped to whoever buys
