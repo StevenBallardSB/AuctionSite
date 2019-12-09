@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AuctioinSite.Data;
 using AuctionSite.Models;
+using System.Security.Claims;
 
 namespace AuctionSite.Controllers
 {
@@ -58,6 +59,7 @@ namespace AuctionSite.Controllers
         {
             if (ModelState.IsValid)
             {
+                listingViewModel.listingAuthor = User.Identity.Name;
                 _context.Add(listingViewModel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

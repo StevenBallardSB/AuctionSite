@@ -10,6 +10,7 @@
     <thead>
         <tr>
             <th>List Item Name</th>
+            <th>List Item Author</th>
             <th>List Item Condition</th>
             <th>Can Be Shipped</th>
             <th>List Item Buy Out Price</th>
@@ -26,6 +27,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>@Html.DisplayFor(modelItem => item.listingName)</td>
+            <td>@Html.DisplayFor(modelItem => item.listingAuthor)</td>
             <td>@Html.DisplayFor(modelItem => item.listItemCondition)</td>
             <td>@Html.DisplayFor(modelItem => item.isShipping)</td>
             <td>@Html.DisplayFor(modelItem => item.listingBuyOutPrice)</td>
